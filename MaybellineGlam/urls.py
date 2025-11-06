@@ -3,6 +3,7 @@ from .import views #import views module for the current directory
 
 #urlpattens list contains the path for respective functions defined in views.py
 urlpatterns=[
+    path('', views.index, name='home'),
     #URL path for importing the data from a csv file using importingFromCsv function
     path('MaybellineGlam/import-data',views.importFromCSV,name='importData'),
     #URL path to load index page using index function 
