@@ -1,0 +1,27 @@
+<!--Extending 'master.html' to inherit its structure and styles-->
+{% extends 'master.html' %}
+
+<!--Providing title of the document in 'search_products.html'-->
+{% block title %}
+    Search_products
+{% endblock %}<!--end of title block-->
+
+<!--Providing content to display in 'search_products.html'-->
+{% block content %}
+<div class="w3-row">
+    <div class="w3-content" style="max-width: 350px;">
+                <h2 class=" w3-black w3-center">Search Products</h2>
+            <!-- Creating form that sends GET request to 'searchProducts' url-->       
+            <form method="GET" action="{% url 'searchProducts' %}">
+                <!-- Creating text input field for the serach -->
+                <div class="w3-section">
+                    <input type="text" name="product_type" placeholder="Enter product type" class="w3-input w3-border">
+                </div>
+                <!-- Creating a button to submit the search-->
+                <div class="w3-center">
+                    <input type="submit" class="w3-yellow w3-button">
+                </div>
+            </form><!-- End of form tag -->
+    </div>
+</div>
+{% endblock %}<!--End of content block-->

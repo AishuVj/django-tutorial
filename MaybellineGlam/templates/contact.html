@@ -1,0 +1,43 @@
+<!--Extending 'master.html' to inherit its structure and styles-->
+{% extends 'master.html' %}
+
+<!--Providing title of the document in 'contact.html'-->
+{% block title %}
+    Contact Page
+{% endblock %}<!--end of title block-->
+
+
+<!--Providing content to display in 'contact.html'-->
+{% block content %}
+<!--Creating a div for row with padding-->
+<div class="w3-row-padding">
+    <div class="w3-content" style="max-width: 350px;">
+        <!--Providing heading for the document using h2 tag-->
+        <h2 class="w3-center w3-black">Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us.</p> 
+                 <!-- Creating form to submit using the POST method -->       
+                <form action="/contact/" method="post">
+                     <!-- Creating text input field for the user name -->
+                    <div class="w3-section">
+                        <label>Name</label>
+                        <input type="text"  name="name" class="w3-input w3-border w3-border-black" required>
+                    </div>
+                    <!-- Creating email input field for the user email -->
+                    <div class="w3-section">
+                        <label>Email</label>
+                        <input type="email"  name="email" class="w3-input w3-border  w3-border-black" required>
+                    </div>
+                    <!-- Creating text input field for the user message -->
+                    <div class="w3-section">
+                        <label>Message</label>
+                        <input type="text" name="message" class="w3-input w3-border  w3-border-black" style="height: 150px;" required>
+                    </div>
+                    <!-- Creating a button to submit the form  -->
+                    <div class="w3-center">
+                        <input type="submit" name="submit" value="submit" class="w3-button w3-yellow">
+                    </div>
+                </form><!-- End of form tag -->
+
+    </div>
+</div>
+{% endblock %}<!-- End of content block -->

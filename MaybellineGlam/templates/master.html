@@ -1,0 +1,46 @@
+{% load static %}
+
+<!-- Indicating this is a HTML document-->
+<!DOCTYPE html>
+<!-- html start tag-->
+<html>
+    <!--Start of the head tag that contains meta information of this document-->
+    <head>
+        <!--Start of the title tag that provide the title for this document-->
+        <!--Django placeholder template tags for the title that is overridden in the child template that extends this master template-->
+
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title><!--End title tag-->
+        <!-- Link to external w3schools stylesheet-->
+        <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+        <link rel="stylesheet" href="{% static 'theme.css' %}">
+        {% block css %}
+        {% endblock %}
+        
+       
+    </head><!--End head tag-->
+    <!--Start of the body tag that conatins the content to be displayed in the browser-->
+    <!-- Django placeholder template tags for the body content that is overridden in the child tempplate that extends this master template-->
+
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                {% block navbar %}
+                    {% include 'navbar.html'%}
+                {% endblock %}
+
+                {% block content %}
+                {% endblock %}
+            </div>
+            <br><br><br>
+        
+            
+            {% block footer %}
+                {% include 'footer.html'%}
+            {% endblock %}
+        </div>
+ 
+    </body><!--End body tag-->
+</html><!--End html tag-->

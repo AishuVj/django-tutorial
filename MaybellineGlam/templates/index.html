@@ -1,0 +1,58 @@
+<!--Extending 'master.html' to inherit its structure and styles-->
+{% extends 'master.html' %}
+
+{% load static %}
+
+
+<!--Providing title of the document in 'index.html'-->
+{% block title %}
+    My Webpage - Home
+{% endblock %}<!--end of title block-->
+<style>
+    
+
+</style>
+<!--Providing content to display in 'index.html'-->
+{% block content %}
+    <div class="w3-container w3-content w3-center w3-padding">
+        <div class="w3-third w3-margin-bottom" >
+                <div class="w3-card w3-border w3-border-white" >
+                    <div class="w3-container w3-padding" style="height:300px;" >
+
+                        <img src="{% static 'images/img1.jpg' %}" width="100%" height="100%">
+                    </div>
+                    <div class="w3-container w3-padding" style="height:300px;" >
+
+                        <img src="{% static 'images/img5.jpg' %}" width="100%" height="100%">
+                    </div>
+                </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+            <div class="w3-card w3-border w3-border-white" >
+                <div class="w3-container w3-padding" style="height:600px;" >
+                    <img src="{% static 'images/img6.jpg' %}" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+        <div class="w3-third w3-margin-bottom"  >
+            <div class="w3-card w3-border w3-border-white" >
+                <div class="w3-container w3-padding" style="height:300px;" >
+
+                    <img src="{% static 'images/img3.jpg' %}" width="100%" height="100%">
+                </div>
+                <div class="w3-container w3-padding" style="height:300px;" >
+
+                    <img src="{% static 'images/img4.jpg' %}" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<!--End of content block-->
+{% endblock %}
+
+
