@@ -8,15 +8,11 @@ import pandas as pd  #importing pandas library
 #Defining a function called importFromCSV that takes Http request parameter
 def importFromCSV(request):
   
-  #Reading a Csv file 'products1.csv' using read_csv function in pandas library and store it to dataframe
-    # Get the directory where views.py is located (MaybellineGlam folder)
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    # CSV is in the 'data' subfolder
-    csv_path = os.path.join(current_dir, 'data', 'products1.csv')
-    
-    # Read the CSV file
-    dataframe = pd.read_csv(csv_path)
-    dataframe = dataframe.tail(-1)
+  current_dir = os.path.dirname(os.path.abspath(__file__))
+  csv_path = os.path.join(current_dir,'data','products1.csv')
+  #Reading a Csv file 'products1.csv' using read_csv function in pandas library and store it to dataframe variable and excluding the header row using tail(-1) method
+  dataframe = pd.read_csv(csv_path)
+  dataframe=dataframe.tail(-1)
 
   #dataframe = dataframe.iloc[0]['id']
   #print(dataframe)

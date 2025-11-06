@@ -1,5 +1,5 @@
 from django.urls import path #import path from django.urls module
-from .import views #import views module for the current directory
+from . import views #import views module for the current directory
 
 #urlpattens list contains the path for respective functions defined in views.py
 urlpatterns=[
